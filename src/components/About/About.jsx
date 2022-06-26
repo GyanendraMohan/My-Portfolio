@@ -20,8 +20,7 @@ const About = () => {
                 <h1 className="a-title">About Me</h1>
                 <p className="a-sub">
                     It is a long established fact that a reader will be distracted by the
-                    readable content. <br /> <br />
-                    यह एक लंबे समय से स्थापित तथ्य है कि पाठक पठनीय सामग्री से विचलित हो जाएगा।
+                    readable content.
                 </p>
                 <p className="a-desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -25,8 +25,7 @@ const Intro = () => {
                     <div className="i-desc">
                         I am a Software Development Engineer Intern at HashedIn By Deloitte. I have done bTech
                         from UPES Dehradun, Uttarakhand India. I am From
-                        Varanasi, the oldest living city. <br /> <br />
-                        मैं डेलॉइट द्वारा हैशेडइन में एक सॉफ्टवेयर डेवलपमेंट इंजीनियर इंटर्न हूं। मैंने यूपीईएस देहरादून, उत्तराखंड भारत से बीटेक किया है। मैं सबसे पुराने जीवित शहर वाराणसी से हूँ।
+                        Varanasi, the oldest living city.
                     </div>
                 </div>
             </div>
