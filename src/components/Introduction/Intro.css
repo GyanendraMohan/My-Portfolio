@@ -29,7 +29,8 @@
 }
 
 .i-name {
-  font-size: 60px;
+  font-size: 40px;
+  text-shadow: 1px 1px 10px rgb(243, 78, 78), 1px 1px 10px rgb(236, 53, 53);
 }
 
 .i-title {
@@ -61,7 +62,7 @@
   height: 50px;
   font-size: 30px;
   font-weight: bold;
-  color: #59b256;
+  color: #db4518;
   display: flex;
   align-items: center;
 }
@@ -104,4 +105,57 @@
   .i-desc {
     display: none;
   }
+}
+
+.resume-btn {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(17, 223, 45);
+  cursor: pointer;
+
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.resume-btn:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.resume-btn:focus {
+  outline: none;
+}
+
+.resume-btn {
+  background-image: linear-gradient(
+    to right,
+    #6253e1,
+    #852d91,
+    #a3a1ff,
+    #f24645
+  );
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.i-icons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 0.1rem;
+}
+
+.i-icons > * {
+  transform: scale(0.5);
+}
+.i-icons > *:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
 }
