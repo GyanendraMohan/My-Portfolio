@@ -1,6 +1,38 @@
 .i {
   display: flex;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-primary);
+}
+
+/* Background Effect */
+.i-bg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 176, 155, 0.1) 0%,
+    rgba(150, 201, 61, 0.05) 40%,
+    transparent 70%
+  );
+  z-index: 0;
+  animation: pulseBg 10s infinite alternate;
+}
+
+@keyframes pulseBg {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .i-left {
@@ -8,31 +40,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .i-right {
-  flex: 1;
-  position: relative;
+  display: none; /* Hide the right column entirely since we are centering everything */
 }
 
 .i-left-wrapper {
   padding: 50px;
-  height: 60%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
 }
 
 .i-intro {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 300;
+  letter-spacing: 3px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
 }
 
 .i-name {
-  font-size: 40px;
-  text-shadow: 1px 1px 10px rgb(243, 78, 78), 1px 1px 10px rgb(236, 53, 53);
+  font-size: 70px;
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
+/* Title Scroller */
 .i-title {
   height: 50px;
   overflow: hidden;
@@ -40,126 +92,115 @@
 
 .i-title-wrapper {
   height: 100%;
-  animation: move 10s ease-in-out infinite alternate;
+  animation: move 9s ease-in-out infinite alternate;
 }
 
 @keyframes move {
-  25% {
+  33% {
     transform: translateY(-50px);
   }
-  50% {
+  66% {
     transform: translateY(-100px);
   }
-  75% {
-    transform: translateY(-150px);
-  }
   100% {
-    transform: translateY(-200px);
+    transform: translateY(0px);
   }
 }
 
 .i-title-item {
   height: 50px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #db4518;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
   display: flex;
   align-items: center;
+  justify-content: center; /* Center the scrolling items */
 }
-/* 
+
 .i-desc {
-  margin-top: 10px;
-  margin-bottom: 10px;
-} */
-
-.i-scroll {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  bottom: 20px;
-}
-
-.i-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  position: absolute;
-}
-
-.i-bg {
-  clip-path: polygon(100% 0%, 100% 53%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-  background-color: #59b256;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-@media screen and (max-width: 480px) {
-  .i {
-    flex-direction: column;
-  }
-  .i-left-wrapper {
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-  }
-  .i-desc {
-    display: none;
-  }
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin: 0 auto;
 }
 
 .resume-btn {
-  width: 160px;
+  width: auto;
+  min-width: 180px;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(17, 223, 45);
   cursor: pointer;
   text-align: center;
   border: none;
-  background-size: 300% 100%;
   border-radius: 50px;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  background-size: 200% auto;
+  color: white;
+  padding: 18px 40px;
+  transition: all 0.5s;
+  box-shadow: 0 10px 30px rgba(0, 176, 155, 0.3);
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .resume-btn:hover {
-  background-position: 100% 0;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.resume-btn:focus {
-  outline: none;
-}
-
-.resume-btn {
-  background-image: linear-gradient(
-    to right,
-    #6253e1,
-    #852d91,
-    #a3a1ff,
-    #f24645
-  );
-  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+  background-position: right center;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 176, 155, 0.5);
 }
 
 .i-icons {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
-  gap: 0.1rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.i-icons > * {
-  transform: scale(0.5);
+.i-icons img {
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.6;
 }
-.i-icons > *:hover {
-  cursor: pointer;
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+
+/* Dark/Light mode specific filter adjustments if needed, 
+   but variables usually handle color. 
+   For icons, grayscale might look good in both, or adjust opacity. */
+.theme-dark .i-icons img {
+  filter: invert(1) grayscale(100%);
+  opacity: 0.8;
+}
+
+.i-icons img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .i-name {
+    font-size: 45px;
+  }
+
+  .i-title-item {
+    font-size: 24px;
+  }
+
+  .i-desc {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .i-left-wrapper {
+    padding: 20px;
+  }
 }

@@ -1,0 +1,92 @@
+.n-wrapper {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.n-light {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.n-dark {
+  background: rgba(30, 30, 30, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.n-left {
+  flex: 0; /* Just fit the toggle */
+  display: flex;
+  align-items: center;
+}
+
+.n-center {
+  flex: 1; /* Take up remaining space to center the list */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.n-list > ul {
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.n-list > ul > li {
+  transition: all 0.3s;
+  font-size: 16px;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.n-list > ul > li:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Active State */
+.n-list > ul > li.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.n-list > ul > li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .n-wrapper {
+    padding: 0 1rem;
+  }
+
+  .n-list {
+    display: none; /* Hide standard nav on mobile for now */
+  }
+
+  .n-left {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .n-center {
+    justify-content: flex-end; /* Or hide/hamburger */
+  }
+}

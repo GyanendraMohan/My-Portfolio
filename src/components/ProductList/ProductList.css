@@ -1,9 +1,9 @@
 .pl {
-  padding: 50px 100px;
+  padding: 50px 10%;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
+  text-align: center;
 }
 
 .pl-texts {
@@ -20,9 +20,10 @@
 
 .pl-list {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 480px) {

@@ -1,9 +1,12 @@
 import React from "react";
+import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Introduction/Intro";
-import About from "./components/About/About";
+import ResearchFocus from "./components/ResearchFocus/ResearchFocus";
+import FeaturedProject from "./components/FeaturedProject/FeaturedProject";
+import Experience from "./components/Experience/Experience";
+import Education from "./components/Education/Education";
 import ProductList from "./components/ProductList/ProductList";
 import Contacts from "./components/Contacts/Contacts";
-import Toggle from "./components/Toggle/Toggle";
 import { ThemeContext } from "./context";
 import { useContext } from "react";
 
@@ -12,16 +15,37 @@ const App = () => {
   const darkMode = theme.state.darkMode;
   return (
     <div
+      className={darkMode ? "theme-dark" : "theme-light"}
       style={{
-        backgroundColor: darkMode ? "#222" : "white",
-        color: darkMode && "white",
+        backgroundColor: "var(--bg-primary)",
+        color: "var(--text-primary)",
+        transition: "var(--transition)",
+        minHeight: "100vh",
+        position: "relative",
       }}
     >
-      <Toggle />
-      <Intro />
-      <About />
-      <ProductList />
-      <Contacts />
+      <Navbar />
+      <div id="home">
+        <Intro />
+      </div>
+      <div id="research">
+        <ResearchFocus />
+      </div>
+      <div id="featured">
+        <FeaturedProject />
+      </div>
+      <div id="experience">
+        <Experience />
+      </div>
+      <div id="publications">
+        <ProductList />
+      </div>
+      <div id="education">
+        <Education />
+      </div>
+      <div id="contact">
+        <Contacts />
+      </div>
     </div>
   );
 };

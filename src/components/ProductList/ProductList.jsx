@@ -7,10 +7,8 @@ const ProductList = () => {
     return (
         <div className="pl">
             <div className="pl-texts">
-                <h1 className="pl-title">Create & inspire. It's GYAN</h1>
-                <p className="pl-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minus commodi eum fugiat explicabo? Ducimus eveniet blanditiis est itaque fugiat quis explicabo voluptas at quisquam similique! Quam similique dignissimos officiis.
-                </p>
+                <h1 className="pl-title">Conference Publications</h1>
+
             </div>
             <div className="pl-list">
                 {products.map((product) => (

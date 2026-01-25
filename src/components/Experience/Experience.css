@@ -1,0 +1,61 @@
+.exp {
+  padding: 50px 10%;
+  background-color: var(--bg-secondary);
+}
+
+.exp-heading {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.exp-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--secondary-color);
+}
+
+.exp-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.exp-role {
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.exp-company {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+.exp-period {
+  font-size: 14px;
+  color: #999;
+}
+
+.exp-desc {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.exp-desc li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.exp-desc li::before {
+  content: "▹";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}

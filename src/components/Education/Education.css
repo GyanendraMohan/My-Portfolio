@@ -1,0 +1,87 @@
+.edu-skills {
+  padding: 50px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  background-color: var(--bg-primary);
+}
+
+.edu-section,
+.skills-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.es-title {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.edu-card {
+  margin-bottom: 25px;
+}
+
+.edu-card h3 {
+  font-size: 20px;
+  color: var(--text-primary);
+}
+
+.edu-card h4 {
+  color: var(--text-secondary);
+  margin: 5px 0;
+}
+
+.edu-card p {
+  color: var(--text-secondary);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.cert-list {
+  list-style: none;
+}
+
+.cert-list li {
+  margin-bottom: 10px;
+  padding-left: 20px; /* Space for the marker */
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.cert-list li::before {
+  content: "🏆";
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+}
+
+.skill-category {
+  margin-bottom: 30px;
+}
+
+.skill-category h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tags span {
+  background-color: var(--bg-secondary);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+}
